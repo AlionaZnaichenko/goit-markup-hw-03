@@ -1,14 +1,48 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 body {
   font-family: "Roboto", sans-serif;
   color: #434455;
   background-color: #fff;
 }
+
 ul,
 ol {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+.page-header {
+  border-bottom: 1px solid #e7e9fc;
+}
+
 a {
   text-decoration: none;
+}
+.container {
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+}
+.header-nav {
+  display: flex;
+  align-items: center;
 }
 .logo {
   font-family: "Raleway", sans-serif;
@@ -19,14 +53,24 @@ a {
   text-transform: uppercase;
   color: #4d5ae5;
 }
+.header-logo {
+  padding: 24px 0;
+  margin-right: 76px;
+}
 .header-logo .logo-part {
   color: #2e2f42;
 }
 .footer-logo .logo-part {
   color: #f4f4fd;
 }
-
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
 .nav-link {
+  display: block;
+  padding: 24px 0;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -35,8 +79,16 @@ a {
 }
 .contacts {
   font-style: normal;
+  margin-left: auto;
+}
+.contacts-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 .contacts-link {
+  display: block;
+  padding: 24px 0;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -48,9 +100,22 @@ a {
 .contacts-link:focus {
   color: #404bbf;
 }
-
+.section {
+  padding: 120px 0;
+  margin-left: auto;
+  margin-right: auto;
+}
 .page-section-one {
   background-color: #2e2f42;
+}
+.container-section-one {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 48px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .post-title {
   font-weight: 700;
@@ -59,6 +124,7 @@ a {
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
+  width: 496px;
 }
 .button {
   font-family: "Roboto", sans-serif;
@@ -69,7 +135,11 @@ a {
   text-align: center;
   color: #fff;
   background-color: #4d5ae5;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   cursor: pointer;
+  border-radius: 4px;
+  width: 169px;
+  height: 56px;
 }
 
 .button:focus {
@@ -87,6 +157,29 @@ a {
   letter-spacing: 0.02em;
   color: #2e2f42;
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.card-set-item {
+  width: calc((100% - 72px) / 4);
+}
+
 .advantages-list-description {
   font-weight: 400;
   font-size: 16px;
@@ -94,11 +187,26 @@ a {
   letter-spacing: 0.02em;
   color: #434455;
 }
+
 .page-team {
   background-color: #f4f4fd;
 }
+
+.card-set-team {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+  border-radius: 0 0 4px 4px;
+  padding: 72px 0px 0px 0px;
+}
 .our-team-list {
+  display: block;
   background-color: #ffffff;
+  border-radius: 0 0 4px 4px;
+  padding: 0px 0px 32px 0px;
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 .our-team-title {
   font-weight: 700;
@@ -115,6 +223,8 @@ a {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  text-align: center;
+  padding-top: 32px;
 }
 .our-team-list-description {
   font-weight: 400;
@@ -122,6 +232,8 @@ a {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  text-align: center;
+  padding-top: 8px;
 }
 .page-portfolio {
   background: #fff;
@@ -135,12 +247,33 @@ a {
   text-align: center;
   text-transform: capitalize;
 }
+.card-set-portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 24px;
+  padding-top: 72px;
+}
+.card-set-portfolio-item {
+  width: calc((100%-120px) / 6);
+}
+.card-image {
+  display: block;
+}
+
+.text-container {
+  border-bottom: 1px solid #e7e9fc;
+  border-left: 1px solid #e7e9fc;
+  border-right: 1px solid #e7e9fc;
+  padding-bottom: 32px;
+}
 .portfolio-list {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  padding-top: 32px;
+  padding-left: 16px;
 }
 .portfolio-descrsption {
   font-weight: 400;
@@ -148,6 +281,14 @@ a {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  padding-left: 16px;
+  padding-top: 8px;
+}
+.container-footer {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 16px;
 }
 .page-footer {
   background-color: #2e2f42;
@@ -157,4 +298,5 @@ a {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
+  width: 264px;
 }
