@@ -246,9 +246,7 @@ a {
 .page-portfolio {
   background: #fff;
 }
-.page-portfolio-container {
-  padding: 32px 16px;
-}
+
 .portfolio-title {
   font-weight: 700;
   font-size: 36px;
@@ -262,6 +260,7 @@ a {
 .card-set-portfolio {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   gap: 48px 24px;
 }
 .card-set-portfolio-item {
